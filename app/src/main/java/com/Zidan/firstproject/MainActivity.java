@@ -2,6 +2,7 @@ package com.Zidan.firstproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,8 +40,10 @@ EditText textpswrd;
 //                }
                 if (textpswrd.getText().toString().isEmpty() || textname.getText().toString().isEmpty()){
                     Toast.makeText(MainActivity.this, "sihlakan isi username dan password", Toast.LENGTH_SHORT).show();
-                }else if (textname.getText().toString().equals("zidan") && textpswrd.getText().toString().equals("uwaaaw")){
+                }else if (textname.getText().toString().equals("zidan") && textpswrd.getText().toString().equals("uwaw")){
                     Toast.makeText(MainActivity.this, "successfully logged in", Toast.LENGTH_SHORT).show();
+                    Intent intentku = new Intent(MainActivity.this,Kalkulator .class);
+                    startActivity(intentku);
                 }else {
                     Toast.makeText(MainActivity.this, "somethin's wrong,please try again", Toast.LENGTH_SHORT).show();
                 }
